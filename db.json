@@ -1,0 +1,77 @@
+[
+{
+    "question" : "What is the largest rainforest in the world?",
+    "key" : "Amazon",
+    "choices" : ["Congo","Daintree","Tongass","Pacific Temperate","Southeast Asian"]
+},
+{
+    "question" : "Which of the following materials is a type of metal?",
+    "key" : "Gold",
+    "choices" : ["Glass","Resin","sulfur","chlorine"]
+},
+{
+    "question" : "What is 1/2 as a percentage?",
+    "key" : "50%",
+    "choices" : ["25%","0.5","0.25"]
+},
+{
+    "question" : "Can you unscramble the following word to reveal a type of animal: RFEFAIG?",
+    "key" : "Giraffe",
+    "choices" : ["Rafefig","Effarig","Aigfref"] 
+},
+{
+    "question" : "In which country is Mount Everest located?",
+    "key" : "Nepal",
+    "choices" : ["Chinese","Eqypt","India","Indonesia"]
+},
+{
+    "question" : "Which Saint Day is celebrated on February 14th?",
+    "key" : "Saint Valentine",
+    "choices" : ["Saint Joseph","Saint Patrick", "Saint Teresa"]
+},
+{
+    "question" : "Is Easter celebrated on the same date every year?",
+    "key" : "No fixed date",
+    "choices" : ["March 30","April 2","April 19", "March 2"]
+},
+{
+    "question" : "How many equal sides does an isosceles triangle have?",
+    "key" : "Two",
+    "choices": ["Three","Zero","One","Four"]
+},
+{
+    "question" : "What word, beginning with letter C, is a measurement of temperature in degrees?",
+    "key" : "Celsius",
+    "choices" : ["Celvin","Centimeter","cc"]
+},
+{
+    "question" : "Which planet is known as the Red Planet?",
+    "key" : "Mars",
+    "choices" : ["Neptune","Pluto","Venus","Jupiter"]
+},
+{
+    "question" : "How much change would you have from £1.50 if you bought two chocolate bars at 70p each?",
+    "key" : "10p",
+    "choices" : ["140p", "7p", "70p", "0p"]
+},
+{
+    "question" : "What is the 15th letter of the alphabet?",
+    "key" : "Letter O",
+    "choices" : ["Letter M", "Letter P", "Letter N", "Letter L"]
+},
+{
+    "question" : "Which continent has the lowest population of people?",
+    "key" : "Antarctica",
+    "choices" : ["Asia", "Africa", "North America", "South America", "Australia", "Europe"]
+},
+{
+    "question" : "What is 2.4 x 100?",
+    "key" : "240",
+    "choices" : ["24","0.24","2400"]
+},
+{
+    "question" : "How many months of the year begin with the letter A?",
+    "key" : "Two",
+    "choices" : ["One","Three","Four"]
+}
+]

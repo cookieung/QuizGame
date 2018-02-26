@@ -1,0 +1,38 @@
+.header { grid-area: header; }
+.timer { grid-area: timer; }
+.left-tab { grid-area: menu; }
+.question { grid-area: question; }
+.ans1 { grid-area: choice1; }
+.ans2 { grid-area: choice2; }
+.ans3 { grid-area: choice3; }
+.ans4 { grid-area: choice4; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header timer'
+    'menu question question'
+    'menu choice1 choice2'
+    'menu choice3 choice4';
+  grid-gap: 10px;
+  border-radius: 25px;
+}
+.grid-container > div {
+
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.score{
+    background-color:rgba(0, 0, 255, 0.5);
+    margin: 3px;
+    border-radius: 15px;
+}
+
+.menu{
+    background-color:rgba(0, 0, 0, 0.5);
+    margin: 3px;
+    border-radius: 15px;
+}

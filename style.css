@@ -1,0 +1,29 @@
+body{
+    background-image: url("https://images.pexels.com/photos/278887/pexels-photo-278887.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
+}
+
+.bg_layer{
+    padding: 5px;
+
+}
+
+.margin{
+    margin: 5px;
+}
+
+padding{
+    padding: 5px;
+}
+
+.panel{
+    height: 80vh;
+}
+
+
+.inline_display{
+    display: inline;
+}
+
+.bg_color{
+    background-color:rgba(255, 255, 255, 0.5);
+}
