@@ -88,8 +88,7 @@ init();
 
 
     function recursiveQID(qid,root,num){
-        // if(root.length === num) return root;
-        // if(root.indexOf(qid) < 0 ) root.push(qid);
+
         if (root.indexOf(qid) < 0){
             //console.log(qid);
             return qid;
@@ -117,46 +116,10 @@ init();
 
     }
 
-    // function timer(callback, delay) {
-    //     var id, started, remaining = delay, running
-    
-    //     this.start = function() {
-    //         running = true
-    //         started = new Date()
-    //         id = setTimeout(callback, remaining)
-    //     }
-    
-    //     this.pause = function() {
-    //         running = false
-    //         clearTimeout(id)
-    //         remaining -= new Date() - started
-    //     }
-    
-    //     this.getTimeLeft = function() {
-    //         if (running) {
-    //             this.pause()
-    //             this.start()
-    //         }
-    
-    //         return remaining
-    //     }
-    
-    //     this.getStateRunning = function() {
-    //         return running
-    //     }
-    
-    //     this.start()
-    // }
 
     function countDownToNext(){
 
-        // setInterval(function () {
-        //     changeToNextQuestion(true);
-        // }, 10000);
         countDown(30);
-
-        // window.bindTimeout(function (t) {document.getElementById("timer").innerHTML = t/1000;}, 1000);
-        // window.setTimeout(function () {changeToNextQuestion(true);}, 15000);
 
     }
 
@@ -164,35 +127,19 @@ init();
     function countDown(i) {
         timer = setInterval(function () {
             document.getElementById("timer").innerHTML = i;
-            i--;
-            console.log(i);
             if(i === 0 ) {
+                if(isLastQuestion()) {
+                    alert("You finished");
+                    location.reload();
+                    return ;
+                }
                 clearInterval(timer); 
                 changeToNextQuestion(true);
             } //if i is 0, then stop the interval
+            i--;
         }, 1000);
     }
 
-// var secondsLabel = document.getElementById("timer");
-// var totalSeconds = 10;
-
-
-// function setTime() {
-//   --totalSeconds;
-//   secondsLabel.innerHTML = pad(totalSeconds % 60);
-// }
-// function resetTimer(){
-//     totalSeconds = 10;
-// }
-
-// function pad(val) {
-//   var valString = val + "";
-//   if (valString.length < 2) {
-//     return "0" + valString;
-//   } else {
-//     return valString;
-//   }
-// }
 
 
     function initQuestion(){
