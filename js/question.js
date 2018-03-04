@@ -108,7 +108,7 @@ init();
             //console.log(qid);
             return qid;
         }
-        let tmp = Math.random()*15;
+        let tmp = Math.random()*items.length;
         qid = Math.floor(tmp);
         return recursiveQID(qid,root,num);
     }

@@ -73,5 +73,80 @@
     "question" : "How many months of the year begin with the letter A?",
     "key" : "Two",
     "choices" : ["One","Three","Four"]
+},
+{
+    "question" : "Which is not the country name that begin with letter F?",
+    "key" : "Fuji",
+    "choices" : ["France", "Fiji", "Finland"]
+},
+{
+    "question" : "In which ocean did the famous Titanic ship sink in 1912?",
+    "key" : "Atlantic",
+    "choices" : ["Pacific", "Mediterranean", "Arctic", "India"]
+},
+{
+    "question" : "Can you place the following words in alphabetical order: Nice, Naughty, Nasty, Noble?",
+    "key" : "Nasty, Naughty, Nice, Noble",
+    "choices" : ["Nasty, Noble, Naughty, Nice,","Nasty, Naughty, Noble, Nice","Naughty, Nasty, Noble, Nice"]
+},
+{
+    "question" : "What type of animal is a ladybird?",
+    "key" : "Insect",
+    "choices" : ["Arachnid","Orchid","Intersect","Reptile","Repeat"] 
+},
+{
+    "question" : "How many angles does a triangle have?",
+    "key" : "Three",
+    "choices" : ["Two","One","None","Four","Half"]
+},
+{
+    "question" : "Which male singer released two songs at the start of 2017 called Castle on the Hill and Shape of You?",
+    "key" : "Ed Sheeran",
+    "choices" : ["Edge Sheeran","Ed Sherann", "Add Sheran"]
+},
+{
+    "question" : "What letter is located between Z and C on a keyboard?",
+    "key" : "Letter X",
+    "choices" : ["Letter Y","Letter S","Letter V", "Letter A"]
+},
+{
+    "question" : "How many letters in the English alphabet?",
+    "key" : "26",
+    "choices": ["22","24","28","26"]
+},
+{
+    "question" : "What should the height and width of a football goal measure?",
+    "key" : "2.4mX7.3m",
+    "choices" : ["2.0mX7.0m","2.2mX7.3m","2.5mX7.1m"]
+},
+{
+    "question" : "How many pockets are there on a snooker table?",
+    "key" : "Six",
+    "choices" : ["Five","Three","Four"]
+},
+{
+    "question" : "What is the name of the racquet game played in a closed wall court with a small rubber ball?",
+    "key" : "Squash",
+    "choices" : ["Squa", "Squache", "Scuase", "Shcuash"]
+},
+{
+    "question" : "Can you unscramble the following word to reveal a type of sport: GINKIS?",
+    "key" : "Skiing",
+    "choices" : ["ginisk", "gisink", "kingis", "singik"]
+},
+{
+    "question" : "Which piece on a chess board makes an L-shaped move?",
+    "key" : "The Knight",
+    "choices" : ["The Bishop", "The King", "The Queen", "The Ship"]
+},
+{
+    "question" : "What is the female part of a flower called?",
+    "key" : "Pistil",
+    "choices" : ["Pistal","Corolla","Petal"]
+},
+{
+    "question" : "What colour is the Statue of Liberty?",
+    "key" : "Green",
+    "choices" : ["Black","Grey","White"]
 }
 ]
