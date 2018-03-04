@@ -3,6 +3,7 @@ var currQ;
 var traceQID;
 var curr = 0 ;
 var timer;
+var sum_score=0;
 
 
 init();
@@ -49,12 +50,13 @@ init();
             $("#play").css("display","block");
         });
             
-        $(".choice").click(function(){
+        $(".choice").click(function(e){
             if(isLastQuestion()) {
                 alert("You finished");
                 location.reload();
             }else{
                 clearInterval(timer); 
+                console.log("event",e.target);
                 changeToNextQuestion(false);
             }
     
@@ -99,6 +101,22 @@ init();
     }
 
 
+    function randomAnswer(qid,root,result,num){
+        console.log("raz :",result,root,num);
+        if ( result.length === num){
+            console.log("Do return",result)
+              return result;
+        }
+        if( result.indexOf(root[qid]) < 0){
+            console.log("Do push"+qid)
+            result.push(root[qid]);
+        }
+
+        let tmp = Math.random()*root.length;
+        qid = Math.floor(tmp);
+        return randomAnswer(qid,root,result,num);
+    }
+
     function genTab(num) {
         let html = "";
         let traceQID = [];
@@ -119,7 +137,7 @@ init();
 
     function countDownToNext(){
 
-        countDown(30);
+        // countDown(30);
 
     }
 
@@ -140,22 +158,46 @@ init();
         }, 1000);
     }
 
+    function shuffleChoice(arr,key){
+        let size = arr.length;
+        let result = [];
+        let tmp = arr;
+
+        console.log("Before ",tmp);
+
+        result = randomAnswer(0,tmp,result,3);
+
+        let i = Math.random()*4;
+        let d = Math.floor(i);
+
+        console.log("After ",result);
+
+        console.log(result,"ID ANS"+d,key);
+        result.push(result[d]);
+        result[d] = key;
+        console.log("FFF",result);
+
+
+
+        return result;
+    }
+
 
 
     function initQuestion(){
         currQ = getQuestion();
-        //console.log(currQ);
+        let ch = shuffleChoice(currQ.choices,currQ.key);
         $(".left-tab").css("width","15vw").css("margin-left","2vw").css("margin-right","2vw");
         $("#question").css("width","75vw").css("height","20vh").css("margin-left","2vw").css("margin-right","3vw");
         $("#question").html("<p>[Q"+(curr+1)+"]"+currQ.question+"</p>");
         $("#choice1").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice1").html("<p>"+currQ.key+"</p>");
+        $("#choice1").html("<p>"+ch[0]+"</p>");
         $("#choice2").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice2").html("<p>"+currQ.choices[0]+"</p>");
+        $("#choice2").html("<p>"+ch[1]+"</p>");
         $("#choice3").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice3").html("<p>"+currQ.choices[1]+"</p>");
+        $("#choice3").html("<p>"+ch[2]+"</p>");
         $("#choice4").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice4").html("<p>"+currQ.choices[2]+"</p>");
+        $("#choice4").html("<p>"+ch[3]+"</p>");
         countDownToNext();
     }
 
