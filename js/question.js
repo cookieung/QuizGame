@@ -50,33 +50,46 @@ init();
             $("#play").css("display","block");
         });
             
-        $(".choice").click(function(e){
-            if(isLastQuestion()) {
-                alert("You finished");
-                location.reload();
-            }else{
-                clearInterval(timer); 
-                console.log("event",e.target);
-                changeToNextQuestion(false);
-            }
-    
-        });
+
 
 
     
     }
 
-    function changeToNextQuestion(isTimeout){
-        console.log(isTimeout);
-        if(isTimeout){
-            $("#score-"+(curr+1)).css("background-color","rgba(255,0,0,0.5)");
-            // alert("Timeout at "+(curr+1));
-            // resetTimer();
-        }
-        else{
+
+    function answer(obj){
+        let isCorrect = obj.value;
+        let id = obj.id;
+        clearInterval(timer); 
+
+            if(isCorrect){  
+                $("#"+id).css("background-color","rgba(0,128,0,0.5)");
+                document.getElementById("score").innerHTML = ++sum_score;
+            }
+            else{
+                $("#"+id).css("background-color","rgba(255,0,0,0.5)");
+            }
+            if(isLastQuestion()) {
+                updateTab(isCorrect);
+                alert("You finished with "+sum_score+" score");
+                location.reload();
+            }else{
+                setTimeout(function(){
+                    $("#"+id).css("background-color","rgba(255,255,255,0.5)");
+
+                    changeToNextQuestion(isCorrect);
+                },2000);
+            }
+    }
+
+    function updateTab(isCorrect){
+        if(isCorrect){
             $("#score-"+(curr+1)).css("background-color","rgba(0,128,0,0.5)");
-        }
-        // resetTimer();
+        }else $("#score-"+(curr+1)).css("background-color","rgba(255,0,0,0.5)");
+    }
+
+    function changeToNextQuestion(isCorrect){
+        updateTab(isCorrect);
         curr++;
         initQuestion();
     }
@@ -152,7 +165,7 @@ init();
                     return ;
                 }
                 clearInterval(timer); 
-                changeToNextQuestion(true);
+                changeToNextQuestion(false);
             } //if i is 0, then stop the interval
             i--;
         }, 1000);
@@ -191,13 +204,17 @@ init();
         $("#question").css("width","75vw").css("height","20vh").css("margin-left","2vw").css("margin-right","3vw");
         $("#question").html("<p>[Q"+(curr+1)+"]"+currQ.question+"</p>");
         $("#choice1").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice1").html("<p>"+ch[0]+"</p>");
+        $("#choice1").html("<p>"+ch[0]+"</p>").attr("value",ch[0]===currQ.key);
+        document.getElementById("choice1").onclick = function(){answer(this)};
         $("#choice2").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice2").html("<p>"+ch[1]+"</p>");
+        $("#choice2").html("<p>"+ch[1]+"</p>").attr("value",ch[1]===currQ.key);
+        document.getElementById("choice2").onclick = function(){answer(this)};
         $("#choice3").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice3").html("<p>"+ch[2]+"</p>");
+        $("#choice3").html("<p>"+ch[2]+"</p>").attr("value",ch[2]===currQ.key);
+        document.getElementById("choice3").onclick = function(){answer(this)};
         $("#choice4").css("width","35vw").css("margin-left","2vw").css("margin-right","2vw");
-        $("#choice4").html("<p>"+ch[3]+"</p>");
+        $("#choice4").html("<p>"+ch[3]+"</p>").attr("value",ch[3]===currQ.key);
+        document.getElementById("choice4").onclick = function(){answer(this)};
         countDownToNext();
     }
 
