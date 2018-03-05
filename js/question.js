@@ -64,7 +64,7 @@ init();
 
             if(isCorrect){  
                 $("#"+id).css("background-color","rgba(0,128,0,0.5)");
-                document.getElementById("score").innerHTML = ++sum_score;
+                document.getElementById("score").innerHTML = "Score : "+ ++sum_score;
             }
             else{
                 $("#"+id).css("background-color","rgba(255,0,0,0.5)");
@@ -150,17 +150,18 @@ init();
 
     function countDownToNext(){
 
-        // countDown(30);
+        countDown(30);
 
     }
 
 
     function countDown(i) {
         timer = setInterval(function () {
-            document.getElementById("timer").innerHTML = i;
+            document.getElementById("timer").innerHTML = "Timer : "+ i;
             if(i === 0 ) {
                 if(isLastQuestion()) {
-                    alert("You finished");
+                    updateTab(isCorrect);
+                    alert("You finished with "+sum_score+" score");
                     location.reload();
                     return ;
                 }
