@@ -71,8 +71,8 @@ init();
             }
             if(isLastQuestion()) {
                 updateTab(isCorrect);
-                alert("You finished with "+sum_score+" score");
-                location.reload();
+                toggleSummary();
+                // location.reload();
             }else{
                 setTimeout(function(){
                     $("#"+id).css("background-color","rgba(255,255,255,0.5)");
@@ -160,9 +160,9 @@ init();
             document.getElementById("timer").innerHTML = "Timer : "+ i;
             if(i === 0 ) {
                 if(isLastQuestion()) {
-                    updateTab(isCorrect);
-                    alert("You finished with "+sum_score+" score");
-                    location.reload();
+                    updateTab(false);
+                    toggleSummary();
+                    // location.reload();
                     return ;
                 }
                 clearInterval(timer); 
@@ -230,5 +230,15 @@ init();
         items = [];
         currQ = null;
     }
+
+    function reload(){
+        location.reload();
+    }
     
 
+    function toggleSummary(){
+        let summary = "<p>You get "+sum_score+"scores from "+traceQID.length+" questions.</p>"+"<button onclick='reload()'>Finish</button>";
+        $("#summary_pane").html(summary);
+        $("#question_pane").css("display","none");
+        $("#summary_pane").css("display","block");
+    }

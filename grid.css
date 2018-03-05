@@ -35,3 +35,13 @@
     margin: 3px;
     border-radius: 15px;
 }
+
+
+.grid-container-main {
+  display: grid;
+  grid-template-areas:
+    'question question question'
+    'choice1 choice2 choice3';
+  grid-gap: 10px;
+  border-radius: 25px;
+}

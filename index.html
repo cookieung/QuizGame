@@ -20,17 +20,20 @@
 </div>
 
 <div id="menu">
-        <div class="bg_color padding">
-            <div>Choose for play with..</div>
-            <div class="menu" id="hard">15 Questions</div>
-            <div class="menu" id="medium">10 Questions</div>
-            <div class="menu" id="easy">5 Questions</div>
+        <div id="question_pane" class="grid-container bg_color">
+                <div class="question bg_color">Choose for play with..</div>
+                <div id="hard" class="choice ans1 bg_color">15 Questions</div>
+                <div id="medium" class="choice ans2 bg_color">10 Questions</div>
+                <div id="easy" class="choice ans3 bg_color">5 Questions</div>
+
         
         </div>
+
+
 </div>
 
 <div id="play" style="display: none">
-        <div class="grid-container bg_color">
+        <div id="question_pane" class="grid-container bg_color">
                 <div class="left-tab" id="question_tab">
                 </div>
                 <div id="question" class="question bg_color">What is your name?</div>
@@ -39,6 +42,10 @@
                 <div id="choice3" class="choice ans3 bg_color">Ans3</div>
                 <div id="choice4" class="choice ans4 bg_color">Ans4</div>
         
+        </div>
+
+        <div id="summary_pane" class="grid-container bg_color" style="display: none">
+
         </div>
 </div>
 
