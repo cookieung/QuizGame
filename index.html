@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="grid2.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 </head>    
@@ -20,20 +21,24 @@
 </div>
 
 <div id="menu">
-        <div id="question_pane" class="grid-container bg_color">
-                <div class="question bg_color">Choose for play with..</div>
-                <div id="hard" class="choice ans1 bg_color">15 Questions</div>
-                <div id="medium" class="choice ans2 bg_color">10 Questions</div>
-                <div id="easy" class="choice ans3 bg_color">5 Questions</div>
+        <div class="bg_color panel">
+                <div id="head-menu">Choose for play with..</div>
+                <div class="grid-container-main">
 
+                        <div id="hard" class="choice set1 bg_color">15 Questions</div>
+                        <div id="medium" class="choice set2 bg_color">10 Questions</div>
+                        <div id="easy" class="choice set3 bg_color">5 Questions</div>
         
+                
+                </div>
         </div>
+
 
 
 </div>
 
 <div id="play" style="display: none">
-        <div id="question_pane" class="grid-container bg_color">
+        <div id="pane1" class="grid-container bg_color">
                 <div class="left-tab" id="question_tab">
                 </div>
                 <div id="question" class="question bg_color">What is your name?</div>
@@ -44,7 +49,7 @@
         
         </div>
 
-        <div id="summary_pane" class="grid-container bg_color" style="display: none">
+        <div id="summary_pane" class="panel grid-container-main bg_color" style="display: none">
 
         </div>
 </div>

@@ -1,0 +1,35 @@
+.set1 { grid-area: set1; }
+.set2 { grid-area: set2; }
+.set3 { grid-area: set3; }
+
+
+.grid-container-main {
+  display: grid;
+  grid-template-areas:
+    'set1 set2 set3';
+  grid-gap: 10px;
+  border-radius: 25px;
+  padding: 10px;
+}
+.grid-container > div {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#head-menu{
+  padding: 10px;
+}
+
+#easy{
+  padding: 10px;
+}
+
+#medium{
+  padding: 10px;
+}
+
+#hard{
+  padding: 10px;
+}

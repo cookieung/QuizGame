@@ -78,7 +78,7 @@ init();
                     $("#"+id).css("background-color","rgba(255,255,255,0.5)");
 
                     changeToNextQuestion(isCorrect);
-                },2000);
+                },1000);
             }
     }
 
@@ -239,6 +239,6 @@ init();
     function toggleSummary(){
         let summary = "<p>You get "+sum_score+"scores from "+traceQID.length+" questions.</p>"+"<button onclick='reload()'>Finish</button>";
         $("#summary_pane").html(summary);
-        $("#question_pane").css("display","none");
+        $("#pane1").css("display","none");
         $("#summary_pane").css("display","block");
     }
